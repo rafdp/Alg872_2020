@@ -93,9 +93,10 @@ $G(k) \in \left(k^3\log^3 2, k^3 \sum\limits_{l = 0}^{\infty} \frac{1}{2^{3l}}\l
 
 \subsubsection{$T(n) = \sqrt nT(\sqrt n) + n$}
 $T(n) = n + \sqrt n (\sqrt n + n^{1/4}T(n^{1/4})) = 2n + n^{3/4}T(n^{1/4}) = \dotsc = 3n + n^{7/8}T(n^{1/8}) = \dotsc = kn + n^{1-2^{-k}}T(n^{2^{-k}})$.\\
-Повторяться это будет, пока $n^{2^{-k}}$ не станет асимптотически стремиться к константе, \\
-то есть $2^{-k} = \frac{1}{n}$ (потому что $n^{1/n} \rightarrow 1$). 
-В итоге $\boxed{T(n) = \Theta(n\log n)}$
+Повторяться это будет, пока $n^{2^{-k}}$ не станет асимптотически стремиться к константе. \\
+$n^{1/f(n)} = \exp\left(\frac{\ln n}{f(n)}\right) \implies $ если $f(n)$ растёт медленнее $\ln n$, предел $\infty$, если растёт как $\ln n$, предел $e$, и при росте быстрее $\ln n$ предел $1$. \\
+$2^{-k} = \frac{1}{f(n)} = \frac{1}{\log n} \implies k = \log \log n$
+В итоге $\boxed{T(n) = \Theta(n\log \log n)}$
 
 \subsubsection{$T(n) = T(\sqrt n) + n$}
 $G(k) = T(2^k) \implies G(k) = G(\frac{k}{2}) + 2^k$ \\
