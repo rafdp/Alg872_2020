@@ -1,0 +1,52 @@
+\documentclass[11pt,a5paper,fleqn]{article}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm,footskip=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+\setlength\parindent{0pt} 
+
+\begin{document}
+
+
+\begin{center}
+{ \Large 2. Перечислимость, разрешимость, $m$-сводимость}
+
+\end{center}
+{\bf 1.} Функция $u(M)$ равна наибольшему числу тактов работы на входных словах длины $10$, если МТ $M$ останавливается на каждом таком слове, и не определена в противном случае. Вычислима ли $u(M)$?\\
+\smallskip
+{\bf 2.}  Разрешим ли язык $L$, состоящий из всех описаний МТ, у которых есть недостижимое состояние (не достигается ни при каком входе)?\\
+\smallskip
+{\bf 3.}  Перечислим ли язык $L_\emptyset$ состоящий из всех описаний МТ, которые не останавливаются ни на каком входе? \\
+\smallskip
+{\bf 4.}  Показать, что любой перечислимый язык сводится к $L_{stop}$.\\
+\smallskip
+{\bf 5.}  Верно ли, что все непустые коперечислимые языки $m$-сводятся друг к другу?\\
+\smallskip
+{\bf 6}  Функция Трудолюбия Радо (busy beaver function) определяется, как максимальное количество единиц, которые может напечатать МТ с $n$ состояниями перед остановкой. 
+\begin{itemize}
+\item Всюду ли эта функция определена?
+\item (Доп) Вычислима ли эта функция?
+\end{itemize}
+\smallskip
+{\bf 7 (Доп).}  Постройте биекции: 
+\begin{itemize}
+\item $(0, 1) \rightarrow (0, +\infty)$
+\item $[0, 1] \rightarrow [0, 1)$
+\item $[0, 1] \rightarrow [0, 1]^2$
+\item $2^\mathbb{N} \rightarrow [0, 1]$
+\end{itemize}
+\end{document}
+
+
+
