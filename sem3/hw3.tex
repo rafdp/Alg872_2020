@@ -1,0 +1,51 @@
+\documentclass[11pt,a5paper,fleqn]{article}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm,footskip=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+\setlength\parindent{0pt} 
+
+\begin{document}
+
+
+\begin{center}
+{ \Large 2. $\mathcal{P}$ vs $\mathcal{NP}$}
+
+\end{center}
+{\bf 1.} Язык 2-COLOR состоит из кодировок всех графов, заданных матрицами смежности, вершины которых можно корректно окрасить в два цвета (никакие две смежные вершины не имеют один цвет). Верно ли, что язык 2-COLOR лежит в $\mathcal{P}$? В $\mathcal{NP}$? В $co-\mathcal{NP}$?\\
+\smallskip
+{\bf 2.}  Язык $HP$ состоит из всех графов, имеющих гамильтонов путь (несамопересекающийся путь, проходящий через все вершины графа). Язык $HC$ состоит из всех графов, имеющих гамильтонов цикл (цикл, проходящий через все вершины, в котором все вершины, кроме первой и последней, попарно различны).
+Постройте явные полиномиальные сводимости $HC$ к $HP$ и наоборот.\\
+\smallskip
+{\bf 3.}  Покажите, что язык всех тавтологичных 3-КНФ является полным в классе $co-\mathcal{NP}$. Верно ли это для языка всех тавтологичных 2-КНФ? \\
+\smallskip
+{\bf 4.}  Докажите следующие свойства полиномиальной сводимости:
+
+($i$) Рефлексивность: $A\leq_p A$; транзитивность: $A\leq_p B, B\leq_p C \implies A\leq_p C$;
+
+($ii$) Если $B\in\mathcal{P}$ и $A\leq_p B$, то $A\in\mathcal{P}$;
+
+($iii$) Если $B\in\mathcal{NP}$ и $A\leq_p B$, то $A\in\mathcal{NP}$.\\
+\smallskip
+{\bf 5.}  Докажите, что классы $\mathcal{P}$ и $\mathcal{NP}$ замкнуты относительно \\
+операции $*$~---~звезды Клини (была в ТРЯПе). Приведите также и сертификат принадлежности слова языку $L^*$, где $L\in\mathcal{NP}$. \\
+\smallskip
+{\bf 6 (Доп)}  Верно ли, что класс $co-\mathcal{NP}$ замкнут относительно операции чётной итерации \\
+$L^{even-*} = \{\varepsilon\} \cup L^2 \cup L^4 \cup\dotsc$? \\
+\smallskip
+{\bf 7 (Доп)} Замкнут ли класс $\mathcal{P}$ относительно взятия подслова? \\
+\end{document}
+
+
+
