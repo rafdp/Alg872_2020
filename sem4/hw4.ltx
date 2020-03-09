@@ -1,0 +1,41 @@
+\documentclass[11pt,a5paper,fleqn]{article}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm,footskip=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+\setlength\parindent{0pt} 
+
+\begin{document}
+
+
+\begin{center}
+{ \Large 4. Полиномиальная сводимость, \\
+временные классы за $\mathcal{P}$ и $\mathcal{NP}$}
+
+\end{center}
+{\bf 1.}$\;$Определите, являются ли задачи выполнимости и тавтологичности булевой формулы в ДНФ $\mathcal{P}, \mathcal{NP}c$ или $co\mathcal{NP}c$. \smallskip \\
+{\bf 2.}$\;$Под $3SAT$ обычно имеется в виду множество выполнимых КНФ с не более чем тремя переменными в каждом дизъюнкте. Покажите, что это полиномиально равнозначно $EXACTLY3SAT$, то есть с ровно тремя переменные в дизъюнкте. \smallskip \\
+{\bf 3.}$\;$Докажите, что задача $VERTEX$-$COVER \in \mathcal{NP}c$. 
+\smallskip \\
+{\bf 4.}$\;$Докажите, что задача ПРОТЫКАЮЩЕЕ-МНОЖЕСТВО $\in \mathcal{NP}c$. \\
+{\bf 5.}$\;$Покажите, что $VERTEX$-$COVER \leqslant_p SET$-$COVER$. \\ \smallskip
+{\bf 6.(Доп)}$\;$Докажите, что задача $max$-$2$-$SAT\in \mathcal{NP}c$. \\
+{\bf 7.}$\;$Докажите, что $\Sigma_k \cup \Pi_k \subset \Sigma_{k+1} \cap \Pi_{k+1}$. \\
+{\bf 8.($\text{Доп}^+$)}$\;$Выберите какую-нибудь задачу \href{https://www.researchgate.net/publication/245726393_Completeness_in_the_Polynomial-Time_Hierarchy_A_Compendium}{отсюда}, опишите её, приведите пример элемента из задачи, не из задачи, попробуйте свести $\Sigma_k SAT$ к ней.\\
+{\bf 9.}$\;$Докажите, что полиномиальная иерархия <<схлопывается>>, если существует $\mathcal{PH}c$ задача. \\
+Под схлопыванием имеется в виду $\exists k: \mathcal{PH} = \Sigma_k = \Pi_k$. \\
+\end{document}
+
+
+
