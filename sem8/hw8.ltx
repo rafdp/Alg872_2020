@@ -1,0 +1,76 @@
+\documentclass[11pt,a5paper,fleqn]{article}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm,footskip=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+\setlength\parindent{0pt} 
+
+\begin{document}
+
+
+\begin{center}
+{ \Large 8. Вероятностные классы (и алгоритмы)}
+
+\end{center}
+{\bf 1.}$\;$Докажите, что $\mathcal{ZPP} = \mathcal{RP} \cap co\mathcal{RP}$\smallskip \\
+{\bf 2.}$\;$Пусть $\mathbf{A}, \mathbf{B}, \mathbf{C}$~---~целочисленные матрицы $n\times n$, элементы которых по абсолютной величине не больше $h$. Для проверки равенства $\mathbf{AB}=\mathbf{C}$ пользуемся $\mathbf{x}$~---~случайным $n$-мерным вектором, состоящим из чисел $0\dotsc N-1$. Если $\mathbf{A}(\mathbf{B}\mathbf {x}) = \mathbf{C}\mathbf{x}$, предполагаем, что равенство верное, иначе неверное. Для решения обратите внимание на лемму Шварца-Зиппеля.
+\begin{itemize}
+\item Задаём некоторую вероятность ошибки $p$. Как надо выбрать $N$, чтобы достичь ошибку, не большую $p$?
+\item Определите, в каких вероятностных классах ($\mathcal{BPP}, \mathcal{RP}, co\mathcal{RP}, \mathcal{ZPP}$) лежит такая постановка задачи.
+\item Выбираем также случайный $\mathbf{y}$ с теми же параметрами. Равенство проверяем так: $\mathbf{y}^T\mathbf{AB}\mathbf{x} = \mathbf{y}^T\mathbf{C}\mathbf{x}$. Оцените $N$ для такого случая.
+\end{itemize}\smallskip 
+{\bf 3.}$\;$Покажите, что в задаче сравнения больших чисел вероятность ошибки для больших $n$ меньше $\frac{3}{4}$. Будут ли такие $n$, для которых вероятность ошибки окажется не больше $\frac{1}{2}$. Предложите способ улучшить этот результат: какие параметры задачи можно подкорректировать, чтобы вероятность ошибки была, к примеру, не больше $\frac{1}{8}$?\\ \smallskip
+{\bf 4.}$\;$Определите, в каких из вероятностных классов лежит вероятностный алгоритм для поиска выполняющего набора РОВНО2КНФ, разобранный на семинаре. \\ \smallskip
+{\bf 5. (Доп)}$\;$Докажите теорему Татта о паросочетаниях.
+\smallskip \\
+\newpage
+{\bf 6.}$\;$Докажите, что данная КНФ выполнима:\\
+$(x_{8}\lor x_{5}\lor x_{13}\lor \overline{x_{4}}\lor \overline{x_{18}}\lor \overline{x_{3}}\lor x_{15}\lor x_{12}\lor \overline{x_{14}}\lor \overline{x_{17}}\lor x_{7}\lor x_{16}\lor x_{9})\land$\\
+$(x_{8}\lor x_{1}\lor x_{14}\lor x_{13}\lor x_{15}\lor x_{2}\lor \overline{x_{6}}\lor \overline{x_{11}}\lor \overline{x_{17}}\lor \overline{x_{10}}\lor x_{12}\lor x_{18}\lor x_{16})\land$\\
+$(\overline{x_{10}}\lor x_{9}\lor x_{17}\lor x_{11}\lor x_{13}\lor x_{4}\lor x_{14}\lor x_{12}\lor x_{1}\lor x_{19}\lor \overline{x_{2}}\lor x_{8}\lor x_{7})\land$\\
+$(\overline{x_{5}}\lor x_{4}\lor \overline{x_{17}}\lor x_{7}\lor \overline{x_{19}}\lor x_{11}\lor \overline{x_{18}}\lor \overline{x_{15}}\lor x_{13}\lor x_{12}\lor \overline{x_{2}}\lor x_{1}\lor x_{3})\land$\\
+$(\overline{x_{8}}\lor \overline{x_{13}}\lor \overline{x_{19}}\lor x_{15}\lor \overline{x_{12}}\lor \overline{x_{3}}\lor x_{11}\lor \overline{x_{18}}\lor \overline{x_{17}}\lor \overline{x_{5}}\lor x_{7}\lor x_{14}\lor \overline{x_{10}})\land$\\
+$(\overline{x_{14}}\lor \overline{x_{16}}\lor \overline{x_{5}}\lor x_{17}\lor \overline{x_{12}}\lor \overline{x_{7}}\lor x_{3}\lor \overline{x_{8}}\lor x_{15}\lor x_{9}\lor x_{10}\lor \overline{x_{1}}\lor x_{4})\land$\\
+$(x_{10}\lor \overline{x_{8}}\lor x_{12}\lor \overline{x_{14}}\lor \overline{x_{13}}\lor x_{3}\lor x_{4}\lor x_{6}\lor x_{2}\lor \overline{x_{11}}\lor \overline{x_{15}}\lor \overline{x_{5}}\lor \overline{x_{1}})\land$\\
+$(\overline{x_{17}}\lor x_{3}\lor \overline{x_{7}}\lor \overline{x_{15}}\lor x_{19}\lor x_{13}\lor \overline{x_{8}}\lor \overline{x_{9}}\lor \overline{x_{11}}\lor x_{10}\lor x_{5}\lor x_{1}\lor \overline{x_{16}})\land$\\
+$(\overline{x_{14}}\lor \overline{x_{12}}\lor x_{6}\lor \overline{x_{1}}\lor \overline{x_{16}}\lor x_{9}\lor x_{2}\lor x_{15}\lor \overline{x_{7}}\lor x_{4}\lor x_{18}\lor x_{11}\lor x_{3})\land$\\
+$(\overline{x_{3}}\lor x_{15}\lor x_{4}\lor x_{7}\lor \overline{x_{19}}\lor \overline{x_{8}}\lor x_{13}\lor x_{6}\lor x_{14}\lor x_{16}\lor x_{10}\lor \overline{x_{5}}\lor \overline{x_{1}})\land$\\
+$(\overline{x_{10}}\lor \overline{x_{5}}\lor \overline{x_{3}}\lor x_{6}\lor x_{9}\lor \overline{x_{11}}\lor \overline{x_{15}}\lor \overline{x_{1}}\lor x_{4}\lor x_{8}\lor x_{12}\lor \overline{x_{14}}\lor x_{13})\land$\\
+$(\overline{x_{5}}\lor x_{14}\lor \overline{x_{15}}\lor x_{7}\lor \overline{x_{10}}\lor \overline{x_{13}}\lor x_{19}\lor x_{17}\lor x_{3}\lor \overline{x_{4}}\lor x_{1}\lor \overline{x_{18}}\lor \overline{x_{6}})\land$\\
+$(\overline{x_{15}}\lor x_{3}\lor x_{16}\lor x_{14}\lor \overline{x_{8}}\lor x_{5}\lor x_{9}\lor x_{6}\lor \overline{x_{1}}\lor \overline{x_{13}}\lor x_{19}\lor \overline{x_{18}}\lor x_{11})\land$\\
+$(\overline{x_{2}}\lor \overline{x_{16}}\lor \overline{x_{15}}\lor \overline{x_{19}}\lor \overline{x_{8}}\lor x_{10}\lor \overline{x_{7}}\lor \overline{x_{3}}\lor \overline{x_{12}}\lor x_{14}\lor \overline{x_{18}}\lor \overline{x_{13}}\lor x_{17})\land$\\
+$(\overline{x_{1}}\lor x_{17}\lor \overline{x_{9}}\lor \overline{x_{19}}\lor \overline{x_{2}}\lor x_{12}\lor x_{8}\lor \overline{x_{16}}\lor x_{13}\lor x_{15}\lor x_{18}\lor x_{10}\lor x_{11})\land$\\
+$(x_{15}\lor \overline{x_{1}}\lor \overline{x_{9}}\lor \overline{x_{19}}\lor x_{13}\lor x_{12}\lor \overline{x_{7}}\lor x_{6}\lor \overline{x_{14}}\lor \overline{x_{18}}\lor \overline{x_{11}}\lor x_{5}\lor \overline{x_{10}})\land$\\
+$(x_{4}\lor \overline{x_{11}}\lor \overline{x_{1}}\lor x_{3}\lor x_{13}\lor \overline{x_{17}}\lor x_{18}\lor x_{14}\lor x_{2}\lor x_{8}\lor x_{5}\lor \overline{x_{9}}\lor x_{15})\land$\\
+$(x_{12}\lor x_{19}\lor \overline{x_{6}}\lor x_{3}\lor \overline{x_{9}}\lor x_{14}\lor \overline{x_{11}}\lor x_{17}\lor x_{18}\lor \overline{x_{2}}\lor \overline{x_{10}}\lor \overline{x_{7}}\lor x_{16})\land$\\
+$(x_{13}\lor x_{18}\lor \overline{x_{9}}\lor x_{4}\lor \overline{x_{3}}\lor x_{19}\lor x_{14}\lor \overline{x_{16}}\lor \overline{x_{2}}\lor x_{1}\lor \overline{x_{10}}\lor x_{12}\lor x_{8})\land$\\
+$(x_{3}\lor \overline{x_{13}}\lor \overline{x_{10}}\lor \overline{x_{16}}\lor \overline{x_{15}}\lor x_{12}\lor x_{18}\lor \overline{x_{7}}\lor x_{6}\lor x_{11}\lor x_{19}\lor \overline{x_{2}}\lor \overline{x_{17}})\land$\\
+$(\overline{x_{9}}\lor x_{10}\lor \overline{x_{6}}\lor \overline{x_{3}}\lor x_{4}\lor \overline{x_{1}}\lor \overline{x_{16}}\lor x_{5}\lor x_{11}\lor x_{2}\lor x_{7}\lor x_{19}\lor \overline{x_{13}})\land$\\
+$(x_{13}\lor \overline{x_{15}}\lor \overline{x_{16}}\lor x_{11}\lor \overline{x_{6}}\lor \overline{x_{3}}\lor x_{12}\lor \overline{x_{17}}\lor x_{18}\lor x_{5}\lor \overline{x_{1}}\lor \overline{x_{9}}\lor x_{14})\land$\\
+$(\overline{x_{11}}\lor \overline{x_{1}}\lor \overline{x_{7}}\lor x_{8}\lor \overline{x_{5}}\lor x_{18}\lor x_{17}\lor \overline{x_{3}}\lor x_{19}\lor x_{15}\lor x_{14}\lor \overline{x_{12}}\lor x_{16})\land$\\
+$(\overline{x_{18}}\lor x_{5}\lor x_{11}\lor \overline{x_{4}}\lor x_{7}\lor x_{16}\lor \overline{x_{14}}\lor \overline{x_{12}}\lor x_{8}\lor x_{2}\lor x_{6}\lor \overline{x_{1}}\lor x_{13})\land$\\
+$(x_{7}\lor \overline{x_{12}}\lor x_{6}\lor x_{13}\lor x_{2}\lor \overline{x_{9}}\lor \overline{x_{19}}\lor x_{15}\lor x_{17}\lor x_{5}\lor x_{3}\lor x_{16}\lor \overline{x_{18}})\land$\\
+$(\overline{x_{10}}\lor x_{14}\lor \overline{x_{17}}\lor x_{4}\lor \overline{x_{12}}\lor \overline{x_{8}}\lor x_{15}\lor x_{13}\lor x_{2}\lor x_{5}\lor \overline{x_{1}}\lor \overline{x_{6}}\lor \overline{x_{19}})\land$\\
+$(x_{18}\lor x_{12}\lor \overline{x_{8}}\lor \overline{x_{14}}\lor x_{2}\lor \overline{x_{13}}\lor \overline{x_{15}}\lor x_{9}\lor \overline{x_{3}}\lor x_{10}\lor x_{4}\lor x_{6}\lor x_{7})\land$\\
+$(x_{11}\lor x_{18}\lor x_{8}\lor x_{14}\lor x_{17}\lor \overline{x_{19}}\lor x_{10}\lor \overline{x_{1}}\lor \overline{x_{13}}\lor x_{5}\lor x_{6}\lor \overline{x_{2}}\lor x_{3})\land$\\
+$(\overline{x_{9}}\lor \overline{x_{6}}\lor \overline{x_{7}}\lor \overline{x_{10}}\lor \overline{x_{11}}\lor \overline{x_{17}}\lor x_{18}\lor x_{8}\lor \overline{x_{3}}\lor \overline{x_{14}}\lor x_{15}\lor x_{2}\lor x_{19})\land$\\
+$(x_{5}\lor x_{8}\lor x_{10}\lor x_{2}\lor \overline{x_{17}}\lor \overline{x_{13}}\lor x_{18}\lor x_{19}\lor \overline{x_{11}}\lor x_{14}\lor x_{15}\lor x_{3}\lor \overline{x_{16}})\land$\\
+$(\overline{x_{3}}\lor \overline{x_{10}}\lor \overline{x_{16}}\lor x_{18}\lor \overline{x_{4}}\lor x_{6}\lor \overline{x_{5}}\lor \overline{x_{8}}\lor \overline{x_{7}}\lor \overline{x_{15}}\lor \overline{x_{1}}\lor x_{9}\lor \overline{x_{11}})\land$\\
+$(\overline{x_{15}}\lor \overline{x_{12}}\lor x_{3}\lor x_{13}\lor x_{19}\lor x_{1}\lor x_{2}\lor \overline{x_{10}}\lor x_{9}\lor \overline{x_{16}}\lor \overline{x_{18}}\lor x_{17}\lor \overline{x_{11}})\land$\\
+$(\overline{x_{17}}\lor x_{12}\lor x_{2}\lor x_{4}\lor x_{7}\lor x_{11}\lor \overline{x_{9}}\lor x_{19}\lor \overline{x_{3}}\lor \overline{x_{15}}\lor \overline{x_{8}}\lor x_{14}\lor x_{1})$\\
+$19$ переменных, $33$ дизъюнкта.
+\end{document}
+
+
+
