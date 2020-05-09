@@ -1,0 +1,41 @@
+\documentclass[11pt,a5paper,fleqn]{article}
+\usepackage{graphicx} 
+\usepackage{amsmath} 
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[left=1cm,right=2cm,top=2cm,bottom=2cm,footskip=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+\setlength\parindent{0pt} 
+
+\begin{document}
+
+
+\begin{center}
+{ \Large 11. Интерактивные доказательства, \\$0$-knowledge протоколы}
+
+\end{center}
+{\bf 1.}$\;$Придумайте $0$-knowledge протокол для доказательства того, что Мерлин знает решение некоторого судоку $n^2\times n^2$. \\
+Правила такие: доска $n^2\times n^2$ разбивается на непересекающиеся блоки $n\times n$. В каждой ячейке может быть число от $1$ до $n$. Изначально доска заполнена некоторым количеством чисел, которые в процессе заполнения менять нельзя. В каждом столбце, строке и блоке все числа должны быть разные. \\
+{\bf 2.}$\;$Докажите, что $\mathbf{AM} = BP\cdot \mathcal{NP}$. \\
+{\bf 3.}$\;$Докажите, что $\# 3SAT_D \in IP$. Для этого:
+\begin{itemize}
+\item Превратите булевы формулы в многочлены, значение которых совпадает с булевой формулой на одинаковом наборе. Такая операция называется арифметизацией.
+\item Определите, как с помощью арифметизации получить число выполняющих наборов.
+\item Постройте интерактивное доказательство того, что число выполняющих наборов действительное такое. Для этого понадобятся вычисления по модулю $p$.
+\item Оцените вероятность принятия для верификатора.
+\end{itemize}
+{\bf 4 (Доп).} Все Доп+ задачи.
+
+\end{document}
+
+
+
